@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer News - El Periódico Digital de Videojuegos</title>
+    <!-- Carga de Tailwind CSS para un diseño moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de la fuente Inter y estilos básicos -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Fondo oscuro principal */
+            background-color: #1a1a2e;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-100">
+
+    <!-- Encabezado (Header) - Barra de navegación fija y oscura -->
+    <header class="bg-[#0f0f1d] shadow-2xl sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Título del Periódico (AHORA EN VERDE NEÓN) -->
+            <a href="#" class="text-3xl font-extrabold text-lime-400 tracking-wider">
+                GAMER NEWS
+            </a>
+            
+            <!-- Navegación Principal (Desktop) -->
+            <nav class="hidden md:flex space-x-6">
+                <!-- Colores al pasar el ratón cambiados a 'lime-400' -->
+                <a href="#" class="text-gray-300 hover:text-lime-400 transition duration-300 font-medium border-b-2 border-transparent hover:border-lime-400 py-1">Inicio</a>
+                <a href="#" class="text-gray-300 hover:text-lime-400 transition duration-300 font-medium border-b-2 border-transparent hover:border-lime-400 py-1">Análisis</a>
+                <a href="#" class="text-gray-300 hover:text-lime-400 transition duration-300 font-medium border-b-2 border-transparent hover:border-lime-400 py-1">Noticias</a>
+                <a href="#" class="text-gray-300 hover:text-lime-400 transition duration-300 font-medium border-b-2 border-transparent hover:border-lime-400 py-1">Contacto</a>
+            </nav>
+
+            <!-- Botón de Menú para Móviles -->
+            <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-lime-400 focus:outline-none p-2 rounded-lg transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0f0f1d] px-4 pt-2 pb-4 shadow-inner">
+            <a href="#" class="block py-2 text-gray-300 hover:bg-lime-700 rounded-lg px-3 transition duration-200">Inicio</a>
+            <a href="#" class="block py-2 text-gray-300 hover:bg-lime-700 rounded-lg px-3 transition duration-200">Análisis</a>
+            <a href="#" class="block py-2 text-gray-300 hover:bg-lime-700 rounded-lg px-3 transition duration-200">Noticias</a>
+            <a href="#" class="block py-2 text-gray-300 hover:bg-lime-700 rounded-lg px-3 transition duration-200">Contacto</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Sección de Artículo Destacado (Artículo 1) -->
+        <section class="mb-12">
+            <a href="#" class="block bg-[#1a1a2e] border border-gray-700 rounded-3xl overflow-hidden shadow-2xl group transition duration-300 hover:shadow-lime-500/50">
+                <div class="md:flex">
+                    <!-- Imagen de la Noticia -->
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/800x450/333366/ffffff?text=EL+DESTACADO" alt="Imagen del juego Elden Ring" class="w-full h-64 md:h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    </div>
+                    <!-- Contenido del Artículo -->
+                    <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+                        <!-- Etiquetas en color lima -->
+                        <span class="text-sm font-semibold text-lime-400 uppercase mb-2">Análisis Profundo</span>
+                        <h1 class="text-3xl md:text-4xl font-black mb-4 leading-tight group-hover:text-lime-300 transition duration-300">
+                            Elden Ring: Shadow of the Erdtree - La Expansión que Redefinió el Género
+                        </h1>
+                        <p class="text-gray-400 mb-6 text-base md:text-lg">
+                            Miyazaki lo ha vuelto a hacer. Exploramos cada rincón de la nueva zona, analizando los jefes, la dificultad y cómo se integra esta epopeya con el juego base.
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <span class="font-medium text-lime-400">Por Javier Gómez</span> | 25 Noviembre 2025
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Título de la Sección de Últimas Noticias -->
+        <h2 class="text-4xl font-bold text-gray-100 mb-8 mt-12 border-b-2 border-lime-500 pb-2">Últimas Noticias</h2>
+
+        <!-- Grid de Artículos Secundarios (Artículos 2 al 5) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- Artículo 2 -->
+            <article class="bg-[#1e1e3f] rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300 border border-gray-700 hover:border-lime-500">
+                <a href="#">
+                    <img src="https://placehold.co/600x337/111144/ffffff?text=CYBERPUNK+NEWS" alt="Imagen del juego Cyberpunk 2077" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs font-semibold text-pink-400 uppercase mb-2 block">Impresiones</span>
+                        <h3 class="text-lg font-bold mb-2 leading-snug hover:text-lime-400 transition duration-300">
+                            Primeras Impresiones de "Phantom Liberty": El Resurgir de Night City
+                        </h3>
+                        <p class="text-gray-400 text-sm">
+                            Dogtown nos espera con nuevas mecánicas, una historia digna de espías y una mejora gráfica notable. ¿Vale la pena volver?
+                        </p>
+                        <div class="text-xs text-gray-500 mt-4">Hace 3 horas</div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article class="bg-[#1e1e3f] rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300 border border-gray-700 hover:border-lime-500">
+                <a href="#">
+                    <img src="https://placehold.co/600x337/441144/ffffff?text=PS5+SLIM" alt="Imagen de hardware de consola" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs font-semibold text-green-400 uppercase mb-2 block">Hardware</span>
+                        <h3 class="text-lg font-bold mb-2 leading-snug hover:text-lime-400 transition duration-300">
+                            Sony Anuncia el Nuevo Modelo de PS5 (Slim): Más Compacta, Mismo Poder
+                        </h3>
+                        <p class="text-gray-400 text-sm">
+                            Menor tamaño, unidad de disco extraíble y un precio revisado. Analizamos todos los detalles del nuevo hardware de Sony.
+                        </p>
+                        <div class="text-xs text-gray-500 mt-4">Hace 1 día</div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Artículo 4 -->
+            <article class="bg-[#1e1e3f] rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300 border border-gray-700 hover:border-lime-500">
+                <a href="#">
+                    <img src="https://placehold.co/600x337/444411/ffffff?text=OPINION+P+B" alt="Imagen de juego Free-to-Play con Pase de Batalla" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs font-semibold text-yellow-400 uppercase mb-2 block">Opinión</span>
+                        <h3 class="text-lg font-bold mb-2 leading-snug hover:text-lime-400 transition duration-300">
+                            ¿Es necesario el Pase de Batalla en los juegos Free-to-Play de hoy?
+                        </h3>
+                        <p class="text-gray-400 text-sm">
+                            Un debate sobre la monetización, la fatiga del jugador y el valor real que ofrecen los sistemas de progresión de pago.
+                        </p>
+                        <div class="text-xs text-gray-500 mt-4">Hace 2 días</div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Artículo 5 -->
+            <article class="bg-[#1e1e3f] rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.03] transition duration-300 border border-gray-700 hover:border-lime-500">
+                <a href="#">
+                    <img src="https://placehold.co/600x337/114444/ffffff?text=INDIE+GAMES" alt="Imagen de arte de juego independiente" class="w-full h-40 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs font-semibold text-teal-400 uppercase mb-2 block">Listas</span>
+                        <h3 class="text-lg font-bold mb-2 leading-snug hover:text-lime-400 transition duration-300">
+                            Los 10 Juegos Independientes Más Esperados de 2025 (y sus demos)
+                        </h3>
+                        <p class="text-gray-400 text-sm">
+                            De la simulación espacial al RPG de terror, repasamos las joyas ocultas que debes seguir de cerca para el próximo año.
+                        </p>
+                        <div class="text-xs text-gray-500 mt-4">Hace 4 días</div>
+                    </div>
+                </a>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="bg-[#0f0f1d] py-8 mt-16 shadow-inner border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; 2025 Gamer News. Tu Fuente de Noticias de Videojuegos.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-500 hover:text-lime-400 transition duration-300 text-sm">Acerca de</a>
+                <a href="#" class="text-gray-500 hover:text-lime-400 transition duration-300 text-sm">Política de Cookies</a>
+                <a href="#" class="text-gray-500 hover:text-lime-400 transition duration-300 text-sm">Anúnciate</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lógica JavaScript para el menú móvil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Cambiar el ícono (opcional)
+                const isHidden = mobileMenu.classList.contains('hidden');
+                menuToggle.innerHTML = isHidden
+                    ? '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>'
+                    : '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+            });
+        });
+    </script>
+</body>
+</html>
