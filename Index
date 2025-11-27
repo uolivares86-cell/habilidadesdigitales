@@ -155,7 +155,7 @@
     <!-- Pie de Página (Footer) -->
     <footer class="bg-[#151924] py-8 mt-16 shadow-inner border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400">&copy; 2025 GAME PRESS. Desarrollado con ❤️ y HTML. | <span class="text-primary">Tu Sitio Gamer.</span></p>
+            <p class="text-gray-400">&copy; 2025 GAME PRESS. Desarrollado con ❤️. | <span class="text-primary">Tu Sitio Gamer.</span></p>
             <div class="mt-4 space-x-4">
                 <a href="#" class="text-gray-500 hover-text-primary transition duration-300 text-sm">Acerca de</a>
                 <a href="#" class="text-gray-500 hover-text-primary transition duration-300 text-sm">Contáctanos</a>
